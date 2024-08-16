@@ -1,0 +1,26 @@
+$primary: #a6bbcc;
+$dark: #211f20;
+$white: #fff;
+
+$body-color: $white;
+$body-bg: $dark;
+
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
+// Externals
+@import "./assets/bootstrap/scss/bootstrap.scss";
+@import "./assets/fontawesome/css/all.min.css";
+
+// Components
+@import "./App/Homepage/Header/Header.scss";
+@import "./App/Homepage/About/About.scss";
+
+// Partials
+@import "./partials/Stack/Stack.scss";
+@import "./partials/AppNavbar/AppNavbar.scss";
+@import "./partials/AppNavLink/AppNavLink.scss";
