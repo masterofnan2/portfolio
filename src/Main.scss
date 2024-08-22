@@ -1,26 +1,27 @@
-$primary: #a6bbcc;
-$dark: #211f20;
-$white: #fff;
-
-$body-color: $white;
-$body-bg: $dark;
-
-$screen-xs: 0;
-$screen-sm: 576px;
-$screen-md: 768px;
-$screen-lg: 992px;
-$screen-xl: 1200px;
-$screen-xxl: 1400px;
+// Configs
+@import "./assets/sass/functions.scss";
+@import "./assets/sass/mixins.scss";
+@import "./assets/sass/variables.scss";
 
 // Externals
 @import "./assets/bootstrap/scss/bootstrap.scss";
 @import "./assets/fontawesome/css/all.min.css";
 
 // Components
+@import "./App/App.scss";
+@import "./App/Homepage/Homepage.scss";
 @import "./App/Homepage/Header/Header.scss";
-@import "./App/Homepage/About/About.scss";
+@import "./App/About/About.scss";
+@import "./App/Works/Works.scss";
+@import "./App/Contact/Contact.scss";
 
 // Partials
 @import "./partials/Stack/Stack.scss";
 @import "./partials/AppNavbar/AppNavbar.scss";
 @import "./partials/AppNavLink/AppNavLink.scss";
+@import "./partials/Section/Section.scss";
+@import "./partials/SectionTitle/SectionTitle.scss";
+@import "./partials/ProjectItem/ProjectItem.scss";
+@import "./partials/TechnologyItem/TechnologyItem.scss";
+@import "./partials/AnchorScroll/AnchorScroll.scss";
+@import "./App/Technologies/Technologies.scss";

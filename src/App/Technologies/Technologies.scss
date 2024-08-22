@@ -1,0 +1,25 @@
+.technologies-container-1{
+    @include set-background-wave("./App/Technologies/wave.svg");
+}
+
+.technologies-container-2{
+    @include set-background-wave("./App/Technologies/wave-light.svg");
+}
+
+.technologies-container-3{
+    @include set-background-wave("./App/Technologies/wave-dark.svg");
+}
+
+@media screen and (max-width: $screen-sm) {
+    .technologies-container-1{
+        min-height: 1210px;
+    }
+
+    .technologies-container-2{
+        min-height: 690px;
+    }
+
+    .technologies-container-3{
+        min-height: 710px;
+    }
+}

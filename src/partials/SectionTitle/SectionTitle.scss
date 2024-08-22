@@ -1,6 +1,4 @@
-.about {
-  h2 {
-    // border: 1px solid white;
+.section-title {
     font-weight: bold;
 
     &::after {
@@ -12,4 +10,3 @@
       margin-top: .6rem;
     }
   }
-}

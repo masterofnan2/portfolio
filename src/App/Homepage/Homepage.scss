@@ -1,0 +1,27 @@
+@mixin homepage($min-height) {
+  .homepage-container {
+    min-height: $min-height;
+  }
+
+  @media screen and (min-height: $min-height) {
+    .homepage-container {
+      align-items: center !important;
+      padding-top: 0 !important;
+    }
+  }
+}
+
+.homepage-container {
+  @include set-background-wave("./App/Homepage/wave.svg");
+  min-height: 500px;
+}
+
+@media screen and (max-width: $screen-sm) {
+  // $min-height: 600px;
+  // @include homepage($min-height);
+}
+
+@media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+  $min-height: 460px;
+  @include homepage($min-height);
+}

@@ -10,8 +10,20 @@ type Props = {
     size?: Size,
 } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
 
+const brands = [
+    'linkedin',
+    'github',
+    'facebook',
+];
+
 const Icon = React.memo((props: Props) => {
-    const { type = 'regular', size = 1, variant, className = '', ...elementProps } = props;
+    const {
+        type = brands.includes(props.variant) ? 'brands' : 'regular',
+        size = 1,
+        variant,
+        className = '',
+        ...elementProps
+    } = props;
 
     return <i
         className={`fa-${type} fa-${variant} fa-${size}x ${className}`}

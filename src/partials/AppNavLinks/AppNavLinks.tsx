@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import AppNavlink from "../AppNavLink/AppNavLink";
-import { about, home, work } from "../../core/config/links/pages";
+import { about, contact, home, technologies, work } from "../../core/config/links/pages";
 
 const navLinks = [
     {
@@ -18,6 +18,16 @@ const navLinks = [
       title: 'Work',
       href: work,
       icon: "briefcase",
+    },
+    {
+      title: 'Technologies',
+      href: technologies,
+      icon: "project-diagram",
+    },
+    {
+      title: 'Contact',
+      href: contact,
+      icon: "phone",
     },
   ];
 

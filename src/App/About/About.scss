@@ -1,0 +1,24 @@
+.about-container {
+  @include set-background-wave("./App/About/wave.svg");
+
+  p{
+    margin-left: 3rem;
+    text-align: justify;
+    text-indent: 2rem;
+    color: $dark;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .about-container{
+    min-height: 1360px;
+
+    p{
+      margin-left: .5rem;
+    }
+
+    .stacks {
+      justify-content: start!important;
+    }
+  }
+}

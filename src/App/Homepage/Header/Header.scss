@@ -12,3 +12,11 @@
         object-position: center;
     }
 }
+
+@media screen and (max-width: $screen-sm) {
+    .header{
+        img{
+            width: 211px;
+        }
+    }
+}

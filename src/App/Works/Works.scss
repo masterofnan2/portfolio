@@ -1,0 +1,9 @@
+.works-container{
+    @include set-background-wave("./App/Works/wave.svg");    
+}
+
+@media screen and (max-width: $screen-sm) {
+    .works-container{
+        min-height: 550px;   
+    }
+}

@@ -1,13 +1,16 @@
 import React from "react";
 import Header from "./Header/Header";
-import About from "./About/About";
-import MotionComponent from "../../partials/MotionComponent/MotionComponent";
+import { home } from "../../core/config/links/pages";
+import linkId from "../../core/helpers/linkId";
+import Section from "../../partials/Section/Section";
 
 const Homepage = React.memo(() => {
-    return <MotionComponent className="homepage px-5 d-flex flex-column gap-3">
+    return <Section
+        className="homepage px-2 px-sm-5 d-flex flex-column gap-3"
+        id={linkId(home)}
+        selfProps={{className: 'homepage-container'}}>
         <Header />
-        <About />
-    </MotionComponent>
+    </Section>
 });
 
 export default Homepage;
