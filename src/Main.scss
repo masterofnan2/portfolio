@@ -16,10 +16,11 @@
 @import "./partials/ProjectItem/ProjectItem.scss";
 @import "./partials/TechnologyItem/TechnologyItem.scss";
 @import "./partials/AnchorScroll/AnchorScroll.scss";
-@import "./App/Technologies/Technologies.scss";
+@import "./partials/Projects/Projects.scss";
 
 
 // Components
+@import "./App/Technologies/Technologies.scss";
 @import "./App/App.scss";
 @import "./App/Homepage/Homepage.scss";
 @import "./App/Homepage/Header/Header.scss";

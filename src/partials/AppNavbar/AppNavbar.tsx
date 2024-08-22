@@ -23,6 +23,12 @@ const AppNavbar = React.memo(() => {
   const theme = themes[active];
 
   const navtype = React.useMemo(() => {
+    const byDefault = 'navbar-dark bg-dark';
+
+    if (window.screen.width <= 768) {
+      return byDefault;
+    }
+
     switch (theme) {
       case 'light':
         return 'navbar-light bg-light';
@@ -31,7 +37,7 @@ const AppNavbar = React.memo(() => {
         return 'navbar-dark bg-dark';
 
       case undefined:
-        return 'navbar-dark bg-dark';
+        return byDefault;
 
       default:
         return `navbar-dark bg-${theme}`;
@@ -42,7 +48,7 @@ const AppNavbar = React.memo(() => {
     expand="sm"
     className={`app-navbar ${navtype} px-md-5 px-3 w-100`}>
     <AnchorScroll href={home} className={`navbar-brand m-0 col-sm-4 col-lg-3 ${theme !== 'dark' ? 'text-dark' : 'text-light'}`}>Lucieno Zandry</AnchorScroll>
-    <Navbar.Toggle aria-controls="app-navbar-collapse" />
+    <Navbar.Toggle aria-controls="app-navbar-collapse"/>
     <Navbar.Collapse id="app-navbar-collapse" className={`justify-content-between ${theme !== 'light' && 'bg-dark'} rounded mt-4 mt-sm-0`}>
       <AppNavLinks />
       <Link

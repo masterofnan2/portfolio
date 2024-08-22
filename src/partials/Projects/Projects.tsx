@@ -1,8 +1,8 @@
 import React from "react";
 import ProjectItem from "../ProjectItem/ProjectItem";
-import maboo from "./maboo.png";
-import portfolio from "./portfolio.jpeg";
-import budgetmanager from "./budgetmanager.jpeg";
+import maboo from "./options/images/maboo.png";
+import portfolio from "./options/images/portfolio.jpeg";
+import budgetmanager from "./options/images/budgetmanager.jpeg";
 
 const projects = [
     {
@@ -23,7 +23,7 @@ const projects = [
 ]
 
 const Projects = React.memo(() => {
-    return <div className="d-flex gap-5 justify-content-center">
+    return <div className="d-flex gap-5 projects py-3 py-md-0">
         {projects.map((project, key) => <ProjectItem key={key} {...project} />)}
     </div>
 })

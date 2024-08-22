@@ -1,6 +1,7 @@
 .project-item{
-    min-width: 15rem;
+    min-width: min(15rem, 100%);
     width: 25vw;
+    scroll-snap-align: center;
 
     img{
         object-fit: contain;
