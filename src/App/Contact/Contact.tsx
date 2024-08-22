@@ -6,7 +6,7 @@ import SectionTitle from "../../partials/SectionTitle/SectionTitle";
 import Contacts from "../../partials/Contacts/Contacts";
 
 const Contact = React.memo(() => {
-    return <Section id={linkId(contact)} className="col-12">
+    return <Section id={linkId(contact)} className="col-12" selfProps={{className: 'contact'}}>
         <SectionTitle>Contact Details</SectionTitle>
         <Contacts />
     </Section>

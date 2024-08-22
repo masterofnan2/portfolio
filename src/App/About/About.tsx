@@ -21,8 +21,8 @@ const stacks = [
 
 const About = () => {
     return <Section
-        className="about d-flex flex-column gap-3"
-        selfProps={{ className: 'bg-primary about-container' }}
+        className="about d-flex flex-column gap-3 "
+        selfProps={{ className: 'bg-primary about-container justify-content-center' }}
         id={linkId(about)}>
         <SectionTitle variant="dark">About</SectionTitle>
         <p >

@@ -10,23 +10,27 @@ const useIntersectionObserver = <T extends HTMLElement>(
   const [isIntersecting, setIsIntersecting] = React.useState(false);
   const ref: React.LegacyRef<T> = React.createRef();
 
+  const callback: IntersectionObserverCallback = React.useCallback((entries) => {
+    entries.forEach((entry) => {
+      const threshold = options.threshold as number;
+      console.log(entry.intersectionRatio, entry.target.getAttribute('class'));
+
+      setIsIntersecting(
+        entry.isIntersecting && entry.intersectionRatio >= threshold
+      );
+    });
+  }, [options.threshold]);
+
   React.useEffect(() => {
     if (!ref.current) return;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        setIsIntersecting(
-          entry.isIntersecting && entry.intersectionRatio === options.threshold
-        );
-      });
-    }, options);
-
+    const observer = new IntersectionObserver(callback, options);
     observer.observe(ref.current);
 
     return () => {
       if (ref.current) observer.unobserve(ref.current);
     };
-  }, [options]);
+  }, [options, callback]);
 
   return { ref, isIntersecting };
 };

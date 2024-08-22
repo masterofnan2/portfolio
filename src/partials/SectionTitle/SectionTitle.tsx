@@ -8,7 +8,7 @@ const SectionTitle = React.memo((props: SectionTitleProps) => {
     const { className = '', variant = 'primary', ...titleProps} = props;
 
     return <h2
-        className={`section-title display-5 text-${variant} d-flex gap-3 col-12 align-items-center m-0 ${className}`}
+        className={`section-title display-5 text-${variant} d-flex gap-3 col-12 align-items-center m-sm-0 ${className}`}
         {...titleProps} />
 });
 

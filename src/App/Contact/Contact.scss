@@ -1,7 +1,6 @@
-@media screen and (max-width: $screen-sm) {
-  #contact {
-    min-height: 341px;
-    height: 100vh !important;
-    align-items: center;
-  }
+@media screen and (max-width: $screen-md) {
+    .contact{
+        padding-bottom: 5rem;
+        height: auto;
+    }
 }

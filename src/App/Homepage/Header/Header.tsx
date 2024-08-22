@@ -7,7 +7,7 @@ import AnchorScroll from "../../../partials/AnchorScroll/AnchorScroll";
 
 const Header = React.memo(() => {
     return <header className="d-flex justify-content-between align-items-center header flex-wrap flex-wrap-reverse">
-        <div className="col-12 col-sm-5 d-flex flex-column gap-3 mt-3 mt-sm-0 mb-4">
+        <div className="col-12 col-sm-5 d-flex flex-column gap-3 mt-3 mt-sm-0 mb-5">
             <p className="m-0">Hello, I am Lucieno,</p>
             <h1 className="display-1 text-primary">
                 Full stack <br />

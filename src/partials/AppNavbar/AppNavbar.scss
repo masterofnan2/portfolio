@@ -11,9 +11,3 @@
 .navbar {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
-@media screen and (max-width: $screen-md) {
-  .navbar {
-    width: calc(100% - 2rem);
-  }
-}

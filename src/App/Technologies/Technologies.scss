@@ -10,16 +10,18 @@
     @include set-background-wave("./App/Technologies/wave-dark.svg");
 }
 
-@media screen and (max-width: $screen-sm) {
+@media screen and (max-width: $screen-md){
     .technologies-container-1{
-        min-height: 1210px;
+        padding: 5rem 0;
     }
 
     .technologies-container-2{
-        min-height: 690px;
+        padding-bottom: 5rem;
     }
+}
 
+@media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
     .technologies-container-3{
-        min-height: 710px;
+        padding-bottom: 5rem;
     }
 }

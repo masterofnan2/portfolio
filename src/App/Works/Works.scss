@@ -4,6 +4,15 @@
 
 @media screen and (max-width: $screen-sm) {
     .works-container{
-        min-height: 550px;   
+        padding-top: 0;
+        padding-bottom: 5rem;
+    }
+}
+
+
+@media screen and (max-width: $screen-md) {
+    .works-container{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 }

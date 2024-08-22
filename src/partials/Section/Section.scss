@@ -5,10 +5,10 @@
   align-items: center;
 }
 
-@media screen and (max-width: $screen-sm) {
-  .section {
-    height: auto!important;
-    align-items: start;
+@media screen and (max-width: $screen-md) {
+  .section{
+    height: auto;
     padding-top: 5rem;
+    // padding-bottom: 5rem;
   }
 }
