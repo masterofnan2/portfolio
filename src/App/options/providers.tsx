@@ -1,7 +1,8 @@
 import React, { PropsWithChildren } from "react";
 import { home } from "../../core/config/links/pages";
-import { AppContext } from "./contexts";
+import { AppContext, ComponentsContext } from "./contexts";
 import linkId from "../../core/helpers/linkId";
+import ProjectModal, { defaultProjectModalRef } from "../../partials/ProjectModal/ProjectModal";
 
 const AppContextProvider = React.memo((props: PropsWithChildren) => {
   const [state, setState] = React.useState({
@@ -31,5 +32,19 @@ const AppContextProvider = React.memo((props: PropsWithChildren) => {
     <AppContext.Provider value={value}>{props.children}</AppContext.Provider>
   );
 });
+
+export const ComponentsContextProvider = React.memo((props: PropsWithChildren) => {
+
+  const projectModalRef = React.useRef(defaultProjectModalRef);
+
+  const contextValue = React.useMemo(() => ({
+    projectModalRef,
+  }), [projectModalRef]);
+
+  return <ComponentsContext.Provider value={contextValue}>
+    <ProjectModal />
+    {props.children}
+  </ComponentsContext.Provider>
+})
 
 export default AppContextProvider;

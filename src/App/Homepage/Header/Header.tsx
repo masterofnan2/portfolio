@@ -4,6 +4,7 @@ import { ButtonGroup } from "react-bootstrap";
 import Icon from "../../../partials/Icon/Icon";
 import { contact } from "../../../core/config/links/pages";
 import AnchorScroll from "../../../partials/AnchorScroll/AnchorScroll";
+import cv from './CV_Lucieno_Zandry.pdf';
 
 const Header = React.memo(() => {
     return <header className="d-flex justify-content-between align-items-center header flex-wrap flex-wrap-reverse">
@@ -13,9 +14,9 @@ const Header = React.memo(() => {
                 Full stack <br />
                 Web Developer
             </h1>
-            <ButtonGroup className="col-12 col-md-8 mb-5">
+            <ButtonGroup className="col-xs-12 col-lg-8 mb-5">
                 <AnchorScroll className="btn btn-outline-primary col-6" href={contact}>Contact me</AnchorScroll>
-                <AnchorScroll className="btn btn-primary col-1" href={contact}><Icon variant="arrow-down"/></AnchorScroll>
+                <a className="btn btn-primary col-1 download-cv-button" href={cv}><Icon type="solid" variant="download"/> cv</a>
             </ButtonGroup>
         </div>
         <div className="col-12 col-sm-5 d-flex justify-content-center">

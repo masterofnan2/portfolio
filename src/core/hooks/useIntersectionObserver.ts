@@ -13,7 +13,6 @@ const useIntersectionObserver = <T extends HTMLElement>(
   const callback: IntersectionObserverCallback = React.useCallback((entries) => {
     entries.forEach((entry) => {
       const threshold = options.threshold as number;
-      // console.log(entry.intersectionRatio, entry.target.getAttribute('class'));
 
       setIsIntersecting(
         entry.isIntersecting && entry.intersectionRatio >= threshold

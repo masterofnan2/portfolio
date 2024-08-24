@@ -11,6 +11,10 @@
         object-fit: cover;
         object-position: center;
     }
+
+    .download-cv-button{
+        font-weight: bold;
+    }
 }
 
 @media screen and (max-width: $screen-sm) {
