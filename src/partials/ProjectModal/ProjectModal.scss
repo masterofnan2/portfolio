@@ -21,11 +21,11 @@
 
 .project-modal-content {
   background-color: darken($secondary, 35%);
-  height: 50%;
-  min-height: rem(600);
+  height: 70%;
+  width: 90%;
+  min-height: rem(400);
   overflow-y: auto;
   overflow-x: hidden;
-  width: 90%;
   cursor: auto;
 }
 

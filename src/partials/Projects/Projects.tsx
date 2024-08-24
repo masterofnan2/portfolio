@@ -28,7 +28,7 @@ const projects: Project[] = [
             laravel,
         ],
         links: {
-            github: `${GITHUB_BASE_URL}/maboo2.0`,
+            github: `${GITHUB_BASE_URL}/maboo`,
             web: 'https://maboo.mg'
         }
     },
@@ -36,17 +36,38 @@ const projects: Project[] = [
         title: "Budgetmanager",
         description: "A solution for managing personnal expenses",
         image: budgetmanager,
-        technologies: [],
+        technologies: [
+            html,
+            css,
+            react,
+            framerMotion,
+            scss,
+            bootstrap,
+            typescript,
+            axios,
+            php,
+            mysql,
+            laravel,
+        ],
         links: {
-            github: `${GITHUB_BASE_URL}/budgetmanager2.0`,
-            web: 'https://budgetmanager.rf.gd'
+            github: `${GITHUB_BASE_URL}/budgetmanager-frontend2.0`,
+            web: 'https://budgetmanager.000.pe'
         }
     },
     {
         title: "Portfolio",
         description: "About myself and parts of my most recent achievements",
         image: portfolio,
-        technologies: [],
+        technologies: [
+            html,
+            css,
+            react,
+            framerMotion,
+            redux,
+            scss,
+            bootstrap,
+            typescript,
+        ],
         links: {
             github: `${GITHUB_BASE_URL}/portfolio`,
             web: 'https://lucienozandry.rf.gd'

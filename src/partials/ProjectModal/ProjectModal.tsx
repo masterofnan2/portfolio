@@ -4,7 +4,7 @@ import TechnologyItem from "../TechnologyItem/TechnologyItem";
 import { Project } from "../../core/config/types/variables";
 import Icon from "../Icon/Icon";
 import { ComponentsContext } from "../../App/options/contexts";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Target extends EventTarget {
     id: string,
@@ -18,6 +18,16 @@ export const defaultProjectModalRef: ProjectModalRef = {
 }
 
 const containerId = 'project-modal';
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            type: "spring"
+        }
+    }
+}
 
 const ProjectModal = React.memo(() => {
 
@@ -53,7 +63,7 @@ const ProjectModal = React.memo(() => {
 
     const keyupListener = React.useCallback((e: KeyboardEvent) => {
         const { key } = e;
-        
+
         const closeKeys = [
             'Escape',
         ]
@@ -70,25 +80,29 @@ const ProjectModal = React.memo(() => {
         }
 
         return () => {
-           window.removeEventListener('keyup', keyupListener);
+            window.removeEventListener('keyup', keyupListener);
         }
     }, [show, keyupListener]);
 
     const children = React.useMemo(() => {
-        if (project) {
-            return <div
+        return <AnimatePresence>
+            {project && <motion.div
                 className={`project-modal ${showClassName}`}
                 onClick={handleClose}
                 id={containerId}
-                tabIndex={-1}>
-                <div className="project-modal-content d-flex justify-content-between gap-5 align-items-center p-5 rounded">
+                tabIndex={-1}
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden">
+                <div className="project-modal-content d-flex justify-content-between flex-wrap flex-sm-nowrap gap-5 align-items-center p-3 p-sm-5 rounded">
                     <motion.img
                         src={project.image}
                         alt={project.description}
                         layoutId={project.title}
-                        className="project-modal-image col-6" />
+                        className="project-modal-image img-responsive col-12 col-sm-6" />
 
-                    <div className="d-flex flex-column gap-3 col-6">
+                    <div className="d-flex flex-column gap-3 col-12 col-sm-6">
                         <div>
                             <h3 className="display-6 text-primary">{project.title}</h3>
                             <p className="m-0">{project.description}</p>
@@ -116,8 +130,8 @@ const ProjectModal = React.memo(() => {
                         </div>
                     </div>
                 </div>
-            </div>
-        }
+            </motion.div>}
+        </AnimatePresence>
     }, [project, showClassName]);
 
     return createPortal(children, document.body);
