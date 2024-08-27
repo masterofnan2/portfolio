@@ -38,10 +38,15 @@ const About = () => {
             My commitment to writing clean, maintainable code and my enthusiasm for learning new technologies drive me to continuously improve and stay ahead in this ever-evolving field.<br />
         </p>
         <div className="d-flex justify-content-around flex-wrap stacks">
-            {stacks.map((stack, key) => <Stack
-                name={stack.name}
-                experience={stack.experience}
-                key={key} />)}
+            {stacks.map((stack, key) => {
+                const hrefId = key + 1;
+                const href = `#technologies${hrefId === 1 ? '' : hrefId}`
+                return <Stack
+                    href={href}
+                    name={stack.name}
+                    experience={stack.experience}
+                    key={key} />
+            })}
         </div>
     </Section>
 }

@@ -51,7 +51,11 @@ const Technologies = React.memo(() => {
             <h3 className="mb-5 mx-5 mt-2 text-dark">Backend</h3>
             <TechnologiesItems technologies={backTechnologies} />
         </Section>
-        <Section id={linkId(technologies3)} className="col-12" selfProps={{ className: "technologies-container-3" }}>
+        <Section
+            id={linkId(technologies3)}
+            className="col-12"
+            selfProps={{ className: "technologies-container-3" }}
+            intersectionObserverOptions={{rootMargin: '10%', threshold: .3}}>
             <SectionTitle variant="dark">Technologies</SectionTitle>
             <h3 className="mb-5 mx-5 mt-2">Server and Others</h3>
             <TechnologiesItems technologies={serverTechnologies} />

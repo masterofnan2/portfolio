@@ -56,7 +56,7 @@ const AppNavbar = React.memo(() => {
           variant="github"
           type="brands"
           size={2}
-          className="me-3"></Icon></Link>
+          className="me-3 float-end mb-3 mb-sm-0"></Icon></Link>
     </Navbar.Collapse>
   </Navbar>
 });
